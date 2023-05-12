@@ -1,0 +1,26 @@
+<!-- dashboard.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Industrial Data Impact Dashboard</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <svg id="chart" width="960" height="500"></svg>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="{% static 'dashboard.js' %}"></script>
+{% endblock %}
